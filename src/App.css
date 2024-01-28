@@ -1,0 +1,429 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+/* create global variable with :root selector Start*/
+:root {
+    --header-bg-color: rgb(255, 255, 255);
+    --footer-bg-color: rgb(255, 255, 255);
+    --body-bg-color: #e3e3e3;
+    --input-bg: #f2f2f2;
+    --input-bg-focus: #dbdbdb;
+    --text-color: #000;
+    --light-text-color: #545454;
+    --light-text-title: #353535;
+    --light-green: #00ad1d;
+    --dark-green: #016034;
+    --orange: #d97919;
+    --light-orange: #ffaf60;
+    --dark-orange: #c26100;
+    --x-dark-orange: rgb(157, 42, 1);
+    --light-red: rgb(236, 56, 56);
+    --white: #fff;
+    --light-white-text: #eaeaea;
+    --light-black: rgb(23, 23, 23);
+    --light-blue: #0463ac;
+    --dark-blue: #070062;
+  }
+  /* create global variable with :root selector End*/
+
+  /* all link CSS */
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+.header {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 80px;
+  background-color: var(--header-bg-color);
+  border-radius: 5px;
+  box-shadow: -2px 7px 5px -6px rgba(0, 0, 0, 0.61);
+  color: var(--light-text-color);
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  overflow-y: hidden;
+}
+
+.title {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    display: flex;
+    margin-right: 30px;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+}
+
+.nav-bar>ul>li {
+    padding: 10px;
+    
+}
+
+.nav-bar >ul> li:hover,
+.nav-bar > ul > li:hover .logout-btn,
+.nav-bar > ul > li:hover .login-btn 
+ {
+    background-color: var(--light-white-text);
+    border-radius: 5px;
+    cursor: pointer;
+    color: black;
+
+}
+
+/* Resturent card */
+
+/* .card-wraper {
+    margin: 20px;
+    margin-top: 25px;
+    padding: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    width: 250px;
+    height: 300px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.05s ease 0s;
+    overflow: hidden;
+    word-wrap: break-word;
+} */
+
+/* .card {
+    width: 250px;
+    height: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.card-wraper:hover {
+    transform: scale(1.05);
+    /* Scale up the card on hover */
+    
+    /* Add a subtle box shadow */
+/* }
+
+.restaurants-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+
+} */
+
+.card{
+    width: 240px;
+    border-radius: 5px;
+    box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+
+}
+.restaurants-list{
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+  }
+  .card:hover {
+    transform: scale(1.03);
+  }
+  
+  .card h3 {
+    color: var(--light-text-title);
+  }
+  
+  .card > img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .card > h5 {
+    font-weight: lighter;
+    word-wrap: break-word;
+  }
+  
+  .card > span {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .card > span > h4 {
+    font-weight: bolder;
+    font-size: 14px;
+    padding: 0 2px 0;
+    margin-top: 10px;
+    color: var(--light-text-title);
+  }
+  
+  .card > span > h4:first-child {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-green);
+    border-radius: 5px;
+    color: white;
+    padding: 5px;
+    margin-top: 5px;
+  }
+  
+  .card > span > h4:first-child .fa-star {
+    font-size: 10px;
+    padding: 2px 5px 3px 0;
+  }
+
+
+
+
+/* search box */
+.search-container {
+    margin: 100px auto 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.search-button {
+    padding: 15px 18px;
+    border-radius: 15px;
+    background-color: #af684c;
+    color: white;
+    border: none;    
+    font-size: 1rem;
+    cursor: pointer;
+    
+}
+.search-container input {
+  
+width: 15rem;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 8px 15px 8px 12px;
+  border: 4px solid #d9ac6e;
+  border-radius: 15px;
+  color: var(--text-color);
+  outline: none;
+  font-size: large;
+  font-weight: 500;
+  }
+ .search-container input:focus {
+    border-color: var(--dark-orange);
+  }
+  
+.error-message {
+    text-align: center;
+    font-size: large;
+    margin: 20px 0;
+  }
+
+  /* Restaurant Menu CSS Start */
+.restaurant-menu {
+    margin-top: 80px;
+    min-height: 80vh;
+    width: auto;
+  }
+  
+  .restaurant-summary {
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-black);
+    color: var(--light-white-text);
+    overflow-y: hidden;
+  }
+  
+  .restaurant-img {
+    width: 250px;
+    height: 170px;
+    border-radius: 5px;
+  }
+  
+  .restaurant-summary-details {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 520px;
+    margin: 20px;
+  }
+  
+  .restaurant-title {
+    font-size: 40px;
+    max-width: 540px;
+    font-weight: 300;
+  }
+  
+  .restaurant-tags {
+    white-space: nowrap;
+    color: inherit;
+    opacity: 0.7;
+    font-size: 15px;
+    max-width: 540px;
+  }
+  
+  .restaurant-details {
+    display: flex;
+    margin-top: 18px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    color: inherit;
+    font-weight: 600;
+    font-size: 16px;
+    max-width: 340px;
+  }
+  
+  .restaurant-rating {
+    display: flex;
+    align-items: center;
+    padding: 5px 8px;
+    gap: 5px;
+    background-color: var(--dark-green);
+    border-radius: 5px;
+  }
+  
+  .restaurant-menu-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu-items-container {
+    margin-top: 30px;
+    width: 850px;
+  }
+  
+  .menu-title-wrap {
+    padding: 20px;
+  }
+  
+  .menu-title-wrap .menu-title {
+    color: var(--light-text-color);
+  }
+  
+  .menu-count {
+    margin-top: 10px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    font-size: 1rem;
+  }
+  
+  .menu-items-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: rgba(40, 44, 63, 0.45) 0.5px solid;
+  }
+  
+  .menu-item-details {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    overflow: hidden;
+    height: auto;
+  }
+  
+  .item-title {
+    width: auto;
+    color: var(--light-text-color);
+  }
+  
+  .item-desc {
+    margin-top: 14px;
+    line-height: 1.3;
+    color: rgba(40, 44, 63, 0.45);
+    width: inherit;
+    letter-spacing: -0.3px;
+    font-size: 1rem;
+  }
+  
+  .item-cost {
+    margin-top: 4px;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #3e4152;
+    width: inherit;
+  }
+  
+  .menu-img-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 300px;
+    overflow: hidden;
+    height: auto;
+  }
+  
+  .menu-item-img {
+    height: 100px;
+    width: 100px;
+    border-radius: 5px;
+  }
+  
+  .add-btn {
+    background-color: var(--orange);
+    color: var(--text-color);
+    padding: 8px 25px;
+    cursor: pointer;
+    outline: none;
+    border-color: var(--dark-orange);
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Restaurant Menu End Start */
+
+  /* About start */
+
+  .about-container{
+    margin: 30px;
+    margin-top: 90px;
+  }
+
+  /* About End */
+
+
+  /* Shimmer card - Home page >>>>>> START */
+  
+  /* Shimmer card - Home page >>>>>>> END */
+
+
+  /* is online  >>>>>>>  START */
+.is-online{
+  margin: 30px;
+  margin-top: 90px;
+}
+
+  /* is online >>>>>>> END */
+
+
+
