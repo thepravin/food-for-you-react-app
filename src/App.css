@@ -157,6 +157,8 @@ a {
   .card > h5 {
     font-weight: lighter;
     word-wrap: break-word;
+    font-family: sans;
+    font-size:15px;
   }
   
   .card > span {
@@ -172,6 +174,7 @@ a {
     padding: 0 2px 0;
     margin-top: 10px;
     color: var(--light-text-title);
+    
   }
   
   .card > span > h4:first-child {
@@ -189,7 +192,11 @@ a {
     padding: 2px 5px 3px 0;
   }
 
-
+.address{
+  font-size:15px;
+  font-weight:bolder !important ;
+  
+}
 
 
 /* search box */
@@ -413,6 +420,22 @@ width: 15rem;
 
 
   /* Shimmer card - Home page >>>>>> START */
+  .simmer-card{
+    width: 240px;
+    border-radius: 5px;  
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;    
+    border-radius: 200px !important;
+
+}
+.simmer-firstBox{
+  margin-top:5px;
+}
+.simmer-image{
+  width:100%;
+  border-radius:12px;
+}
   
   /* Shimmer card - Home page >>>>>>> END */
 
