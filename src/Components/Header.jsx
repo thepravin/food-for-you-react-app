@@ -31,13 +31,18 @@ export default function Header() {
               <Link to="/contact">Contact</Link>
             </li>
             <li>
-              <Link to="/instamart">InstaMart</Link>
+              <Link >
+              <i class="fa fa-shopping-cart" style={{fontsize:"24px"}}></i>
+              </Link>
             </li>
-            <li>
+            {/* <li>
+              <Link to="/instamart">InstaMart</Link>
+            </li> */}
+            <li >
               {islogging ? (
-                <button onClick={() => setisLogging(false)}>LogOut</button>
+                <button className="login-btn" onClick={() => setisLogging(false)}>LogOut</button>
               ) : (
-                <button onClick={() => setisLogging(true)}>Login</button>
+                <button className="login-btn" onClick={() => setisLogging(true)}>Login</button>
               )}
             </li>
           </ul>
