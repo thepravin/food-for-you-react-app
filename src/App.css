@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&family=Protest+Revolution&family=Signika+Negative:wght@300&display=swap");
 /* create global variable with :root selector Start*/
 :root {
   --header-bg-color: rgb(255, 255, 255);
@@ -471,19 +471,18 @@ a {
 .about-container {
   margin: 30px;
   margin-top: 10rem;
-  
 }
 
 /* About End */
 
 /* Profile - Start */
-.profile-card{
+.profile-card {
   width: 50vw;
   align-item: center;
-  justify-content: center;  
-  margin:auto;
+  justify-content: center;
+  margin: auto;
   border-radius: 5px;
-  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2); 
+  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
   cursor: pointer;
 }
 
@@ -645,6 +644,45 @@ a {
 .shop-cart {
   margin: 30px;
   margin-top: 90px;
+}
+.cart-card {
+  width: 60vw;
+  border-radius: 15px;
+  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: "Kalam";
+  display: flex;
+}
+
+.cart-img img {
+  border-radius: 15px;  
+  text-align: center !important;
+  height:100%;
+}
+.item-details {
+  margin-left: 28px;
+  margin-top: 10px;
+}
+.item-details h4 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+.item-details p {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+}
+.item-details h5 {
+  font-size: 1rem;
+  color: gray;
+}
+.totalItems {
+  font-family: "Kalam";
+  border: 0.2rem solid black;
+  width: 15vw;
+  text-align: center;
+  font-weight: 400;
+  border-radius: 15px;
 }
 
 /* Shop cart - end */

@@ -8,7 +8,7 @@ export default function ShopCart() {
   return (
     <>
       <div className="shop-cart">
-        <h1>Total Item's - {cartItems.length}</h1>
+        <h1 className="totalItems">Total Item's - {cartItems.length}</h1>
         <div>
           {cartItems.map((item) => (
             <CartItems key={item.id} {...item} />
