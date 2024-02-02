@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lemon&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap");
+
 /* create global variable with :root selector Start*/
 :root {
   --header-bg-color: rgb(255, 255, 255);
@@ -47,30 +49,32 @@ a {
   z-index: 999;
   overflow-y: hidden;
 }
-
+.cart-number {
+  color: green;
+}
 
 /* CSS */
 .login-btn {
   background: #fff;
   backface-visibility: hidden;
-  border-radius: .375rem;
+  border-radius: 0.375rem;
   border-style: solid;
-  border-width: .125rem;
+  border-width: 0.125rem;
   box-sizing: border-box;
   color: #212121;
   cursor: pointer;
   display: inline-block;
-  font-family: Circular,Helvetica,sans-serif;
+  font-family: Circular, Helvetica, sans-serif;
   font-size: 1rem;
   /* font-weight: 600; */
-  letter-spacing: -.01em;
+  letter-spacing: -0.01em;
   line-height: 1.3;
   padding: 5px 10px;
   position: relative;
   text-align: left;
   text-decoration: none;
   transform: translateZ(0) scale(1);
-  transition: transform .2s;
+  transition: transform 0.2s;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -81,7 +85,7 @@ a {
 }
 
 .login-btn:not(:disabled):hover:active {
-  transform: scale(1.05) translateY(.125rem);
+  transform: scale(1.05) translateY(0.125rem);
 }
 
 .login-btn:focus {
@@ -90,10 +94,10 @@ a {
 
 .login-btn:focus:before {
   content: "";
-  left: calc(-1*.375rem);
+  left: calc(-1 * 0.375rem);
   pointer-events: none;
   position: absolute;
-  top: calc(-1*.375rem);
+  top: calc(-1 * 0.375rem);
   transition: border-radius;
   user-select: none;
 }
@@ -107,19 +111,8 @@ a {
 }
 
 .login-btn:not(:disabled):active {
-  transform: translateY(.125rem);
+  transform: translateY(0.125rem);
 }
-
-
-
-
-
-
-
-
-
-
-
 
 .title {
   margin: 10px;
@@ -477,10 +470,85 @@ a {
 
 .about-container {
   margin: 30px;
-  margin-top: 90px;
+  margin-top: 10rem;
+  
 }
 
 /* About End */
+
+/* Profile - Start */
+.profile-card{
+  width: 50vw;
+  align-item: center;
+  justify-content: center;  
+  margin:auto;
+  border-radius: 5px;
+  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2); 
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 16vw;
+  border-radius: 15px;
+}
+.profile-img:hover {
+  transform: scale(1.03);
+}
+.profile-contenor {
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+.profile-details {
+  margin: 1px;
+  padding: 2px;
+  line-height: 2.5rem;
+}
+.profile-details h2 {
+  font-size: 2.5rem;
+  font-family: "Protest Revolution", sans-serif;
+}
+.profile-details p {
+  font-size: 1.5rem;
+}
+.profile-btn {
+  padding: 45px;
+  display: flex;
+  gap: 3rem;
+}
+.profile-btn button {
+  padding: 20px 35px;
+}
+
+.linkedin button {
+  background-color: #0a66c2;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+.linkedin :hover {
+  transform: scale(1.03);
+}
+.linkedin button i {
+  font-size: 1.2rem;
+}
+
+.github button {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+}
+.github :hover {
+  transform: scale(1.03);
+}
+.github button i {
+  font-size: 1.2rem;
+}
+
+/* Profile - end */
 
 /* Shimmer card - Home page >>>>>> START */
 .simmer-card {
@@ -512,9 +580,10 @@ a {
 /* footer start */
 .footer-container {
   display: flex;
+
   justify-content: center;
   align-item: center;
-  text-align:center;
+  text-align: center;
   gap: 10px;
   margin: 8px;
   margin-top: 15px;
@@ -525,7 +594,7 @@ a {
   /* box-shadow: -2px 7px 5px -6px rgba(0, 0, 0, 0.61); */
 }
 
-.github-btn { 
+.github-btn {
   align-self: center;
   background-color: #fff;
   background-image: none;
@@ -535,7 +604,7 @@ a {
   border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
   border-style: solid;
   border-width: 2px;
-  box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+  box-shadow: rgba(0, 0, 0, 0.2) 15px 28px 25px -18px;
   box-sizing: border-box;
   color: #41403e;
   cursor: pointer;
@@ -544,7 +613,7 @@ a {
   font-size: 1rem;
   line-height: 10px;
   outline: none;
-  padding: .2rem;
+  padding: 0.2rem;
   text-decoration: none;
   transition: all 235ms ease-in-out;
   border-bottom-left-radius: 15px 255px;
@@ -557,18 +626,25 @@ a {
 }
 
 .github-btn:hover {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 8px -5px;
   transform: translate3d(0, 2px, 0);
 }
 
 .github-btn:focus {
-  box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 2px 8px 4px -6px;
 }
 
-.github-icon{
-  height:3vh;
-  width:3vw;
-  
+.github-icon {
+  height: 3vh;
+  width: 3vw;
 }
 
 /* footer end */
+
+/* Shop cart - start */
+.shop-cart {
+  margin: 30px;
+  margin-top: 90px;
+}
+
+/* Shop cart - end */

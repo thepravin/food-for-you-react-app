@@ -1,5 +1,7 @@
 import { useState } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import Store from "../Utils/Store";
 
 const Title = () => (
   <h1 className="title">🍕 𝓕𝓸𝓸𝓭 𝓯𝓸𝓻 𝓨𝓸𝓾...🍟 </h1>
@@ -15,6 +17,8 @@ const loggedUser = () => {
 export default function Header() {
   const [islogging, setisLogging] = useState(false);
 
+  const cartItems = useSelector(Store => Store.cart.items)
+
   return (
     <>
       <div className="header">
@@ -27,12 +31,13 @@ export default function Header() {
             <li>
               <Link to="/about">About</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/contact">Contact</Link>
-            </li>
+            </li> */}
             <li>
-              <Link >
+              <Link to="/cart" >
               <i class="fa fa-shopping-cart" style={{fontsize:"24px"}}></i>
+              <span className="cart-number">+{cartItems.length}</span>
               </Link>
             </li>
             {/* <li>

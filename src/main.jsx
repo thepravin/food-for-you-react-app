@@ -10,6 +10,8 @@ import Contact from './Components/Contact.jsx';
 import ResturentMeniu from './Components/ResturantMeniu.jsx';
 import Profile from './Components/Profile.jsx';
 import SimmerUI from './Components/SimmerUI.jsx';
+import ShopCart from './Components/ShopCart.jsx';
+
 
 //import InstaMart from './Components/InstaMart.jsx';
 
@@ -54,6 +56,10 @@ const appRouter = createBrowserRouter([
           </Suspense>
         )
       },
+      {
+        path:"/cart",
+        element:<ShopCart/>
+      },
     ]
 
   },
@@ -67,6 +73,6 @@ const appRouter = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={appRouter}/>
+    <RouterProvider router={appRouter}/> 
   </React.StrictMode>,
 )

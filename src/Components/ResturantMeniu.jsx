@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { ITEM_IMG_CDN_URL, cloud_image, res_menu } from "../Data/constant";
 import useRestaurantMenu from "../Utils/useRestaurantMenu";
+import { useDispatch } from "react-redux";
+import { addItem } from "../Utils/cartSlice";
 
 export default function ResturentMeniu() {
   const { id } = useParams();
@@ -9,7 +11,10 @@ export default function ResturentMeniu() {
   // custom hook for restaurant data.....
   const {restaurant,menuData} = useRestaurantMenu(id);
 
-  
+  const dispatch = useDispatch();
+  const addFoodItem = (item)=>{
+    dispatch(addItem(item));
+  }
 
 
   return (
@@ -77,7 +82,7 @@ export default function ResturentMeniu() {
                         className="menu-item-img"
                       />
                     )}
-                    <button className="add-btn">ADD+</button>
+                    <button className="add-btn" onClick={()=> addFoodItem(item)}>ADD+</button>
                   </div>
                 </div>
               ))}
