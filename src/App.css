@@ -644,6 +644,8 @@ a {
 .shop-cart {
   margin: 30px;
   margin-top: 90px;
+  display:flex;
+  justify-content: space-between;
 }
 .cart-card {
   width: 60vw;
@@ -686,3 +688,83 @@ a {
 }
 
 /* Shop cart - end */
+
+/* Bill Card */
+.bill-card {
+  width: 30vw;
+  /* height: 50vh; */
+  max-height: 80vh; /* Adjust the max height as needed */
+  overflow-y: auto; /* Add a scrollbar when content exceeds max height */
+  border-radius: 15px;
+  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
+  cursor: pointer;
+  margin-top: 35px;
+  margin-right: 5px;
+  /* font-family: "Kalam"; */
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color:#FAFAD2;
+  
+}
+
+.bill-card h5 {
+  margin-left: 10px;
+  font-weight:200;
+  color:black;
+  margin-top:20px;
+  color:gray;
+}
+
+.bill-card p {
+  margin-left: 10px;
+  margin-top:20px;
+}
+.bill-items{
+  display:flex;
+  font-size:1.2rem;
+  justify-content:space-between;
+ 
+}
+
+.tottalAmoutn{
+  display:flex;
+  font-size:1.5rem;
+  justify-content:space-between;
+}
+
+.pay-now{
+  padding: 10px 20px !important;
+  align-item:center;
+  justify-content:center;
+  text-align:center;
+  display:flex;
+  gap:3rem;
+  margin-top:25px;
+}
+.pay-now button{
+  padding: 15px 40px !important;
+  align-item:center;
+  justify-content:center;
+  text-align:center;
+  border:none;
+  border-radius:15px;
+  font-size:2rem;
+  box-shadow: -1px 5px 10px 5px rgba(112, 112, 112, 0.2);
+}
+.pay-now button :hover{
+  transform:scale(1.03);  
+}
+
+.g-pay{
+  background-color:white;
+  color:black;  
+}
+.a-pay{
+  background-color:#FFD700;
+  color:black;
+}
+.card-pay{
+  background-color:black;
+  color:white;
+}
