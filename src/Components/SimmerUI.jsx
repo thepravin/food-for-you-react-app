@@ -34,7 +34,7 @@ const HomeSimmer = () => {
 export default function SimmerUI() {
   return (
     <>
-      <div className="restaurants-list">
+      <div className="restaurants-list"  data-testid="simmer-test">
         {/* Use parentheses () instead of curly braces {} for the map function */}
         {Array(17)
           .fill("")

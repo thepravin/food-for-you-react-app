@@ -30,7 +30,7 @@ export default function ShopCart() {
         </div>
 
         <div className="bill-card">
-          <h2>Bill : </h2>
+          <h2>Bill : </h2>          
           {cartItems.map((item) => (
             <BillCart key={item.id} {...item} />
           ))}
