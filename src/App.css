@@ -692,7 +692,7 @@ a {
 /* Bill Card */
 .bill-card {
   width: 30vw;
-  /* height: 50vh; */
+  height: 50vh;
   max-height: 80vh; /* Adjust the max height as needed */
   overflow-y: auto; /* Add a scrollbar when content exceeds max height */
   border-radius: 15px;
