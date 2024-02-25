@@ -36,11 +36,6 @@ Could you make sure you have Node.js and npm installed on your machine?
 3. Run the development server: `npm run dev`
 
 
-
-
-
-
-
 <div align="center">
 <h1>🧑‍💻 Happy coding!</h1>
 </div>
